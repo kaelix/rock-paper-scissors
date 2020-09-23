@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-    <section>
-        <div class="player1">
-            <h2>Player One</h2>
-            <p>0</p>
-        </div>
-        <div class="computer">
-            <h2>Computer</h2>
-            <p>0</p>
-        </div>
-        <div class="game-board">
-            <img class="player-choice" src="images/rock.png" alt="">
-            <img class="computer-choice" src="images/rock.png" alt="">
-            <button class="rock-btn">ROCK</button>
-            <button class="paper-btn">PAPER</button>
-            <button class="scissors-btn">SCISSORS</button>
-        </div>
-    </section>
-    <script src="app.js"></script>
-</body>
-
+	<body>
+		<section>
+			<div class="player1">
+				<h2>Player One</h2>
+				<p>0</p>
+			</div>
+			<div class="computer">
+				<h2>Computer</h2>
+				<p>0</p>
+			</div>
+			<div class="game-board">
+				<img id="player-choice" src="images/rock.png" alt="" />
+				<img id="computer-choice" src="images/rock.png" alt="" />
+			</div>
+			<div class="options-btn">
+				<input type="button" id="rock-btn" value="Rock" />
+				<input type="button" id="paper-btn" value="Paper" />
+				<input type="button" id="scissors-btn" value="Scissors" />
+			</div>
+		</section>
+		<script src="app.js"></script>
+	</body>
 </html>
