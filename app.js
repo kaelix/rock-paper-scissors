@@ -1,5 +1,9 @@
 let playerScore = 0;
 let computerScore = 0;
+let gameText = document.getElementById('game-text');
+const winner = gameText;
+
+const updateComputerScore = document.getElementById('computer-score');
 
 function playerChoice() {
 	const playerChoice = document.getElementById('player-choice');
@@ -34,8 +38,6 @@ function getComputerChoice() {
 }
 
 function userVsComputer(userChoice) {
-	const updateUserScore = document.getElementById('player-score');
-	const updateComputerScore = document.getElementById('computer-score');
 	const computerChoice = getComputerChoice();
 	switch (userChoice + computerChoice) {
 		case 'rockscissors':
@@ -54,6 +56,24 @@ function userVsComputer(userChoice) {
 			draw(userChoice, computerChoice);
 			break;
 	}
+}
+
+function win() {
+	const updateUserScore = document.getElementById('player-score');
+	playerScore++;
+	updateUserScore.textContent = playerScore;
+	winner.textContent = 'Player One Wins!';
+}
+
+function lose() {
+	const updateComputerScore = document.getElementById('computer-score');
+	computerScore++;
+	updateComputerScore.textContent = computerScore;
+	winner.textContent = 'Computer Wins!';
+}
+
+function draw() {
+	winner.textContent = 'Tie!';
 }
 
 function gamePlay() {
